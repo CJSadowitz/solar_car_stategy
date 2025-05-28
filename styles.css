@@ -1,0 +1,29 @@
+body {
+    background-color: gray;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 5%;
+}
+
+.left-column {
+    display: grid;
+    grid-template-rows: auto auto auto; /* You can adjust row heights */
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.right-column {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+/* .user_input_form {
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    width: 50%;
+} */
