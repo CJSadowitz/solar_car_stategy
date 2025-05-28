@@ -16,3 +16,8 @@ There are specific api_tokens that the team has that is required to run and acce
 This is saved in a txt file with the format `influx_db={token}` and `google_apps={token}` <br>
 The website handles the calculations, database pulling and storing of information automatically <br>
 Their is multi user support with saved config for desired calculations <br>
+## Services
+Influx DB for gathering car data on cloud server <br>
+Google Apps Scripts for server backend for calulations api calls and db management <br>
+Open-meteo for weather forcasting in certain locations <br>
+Sun-Calc for determining solar agnle <br>

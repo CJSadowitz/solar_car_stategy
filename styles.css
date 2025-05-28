@@ -19,11 +19,19 @@ body {
 .right-column {
     padding: 10px;
     border: 1px solid #ccc;
+    text-align: center;
 }
 
-/* .user_input_form {
-    text-align: center;
-    align-items: center;
-    margin: auto;
-    width: 50%;
-} */
+.manual {
+    border: 2px solid black;
+    margin-bottom: 1%;
+    padding: 2%;
+    border-radius: 3%;
+}
+
+.required {
+    border: 2px solid black;
+    margin-bottom: 1%;
+    padding: 2%;
+    border-radius: 3%;
+}

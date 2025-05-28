@@ -2,28 +2,60 @@
 <html>
     <head>
         <link rel="stylesheet" href="styles.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/suncalc/1.8.0/suncalc.min.js"></script>
+        <script src="scripts/sun_calculations/solar_altitude.js"></script>
     </head>
     <body>
-        <!-- Right Column Content -->
         <div class="container">
             <!-- Left Column Content: Calculation Outputs -->
             <div class="left-column">
-    
+                
             </div>
+            <!-- Right Column Content: Input and Car State -->
             <div class="right-column">
-                <h2> Variables </h2>
+                <h1> Variables </h1>
                 <form>
-                    <div class="variable_component">
-                        <h3>Variable Component 1</h3>
-                        <input type="text">
+                    <div class="manual">
+                        <h2>Manual Changes</h1>
+                        <div class="variable_component">
+                            <h3>Latitude</h3>
+                            <input type="text">
+                        </div>
+                        <div class="variable_component">
+                            <h3>Longitude</h3>
+                            <input type="text">
+                        </div>
+                        <div class="variable_component">
+                            <h3>Battery Start SoC</h3>
+                            <input type="text">
+                        </div>
+                        <div class="variable_component">
+                            <h3>Weight</h3>
+                            <input type="text">
+                        </div>
+                        <div class="variable_component">
+                            <h3>Cloud Coverage Percentage</h3>
+                            <input type="text">
+                        </div>
+                        <div class="variable_component">
+                            <h3>Weight</h3>
+                            <input type="text">
+                        </div>
                     </div>
-                    <div class="variable_component">
-                        <h3>Variable Component 2</h3>
-                        <input type="text">
-                    </div>
-                    <div class="variable_component">
-                        <h3>Variable Component 3</h3>
-                        <input type="text">
+                    <div class="required">
+                        <h2>Required Inputs</h2>
+                        <div class="variable_component">
+                            <h3>Battery End SoC </h3>
+                            <input type="text">
+                        </div>
+                        <div class="variable_component">
+                            <h3>Rolling Resistance</h3>
+                            <input type="text">
+                        </div>
+                        <div class="variable_component">
+                            <h3>Drag Coefficient</h3>
+                            <input type="text">
+                        </div>    
                     </div>
                     <button type="submit">Compute</button>
                 </form>
@@ -36,6 +68,8 @@
         </div>
     </body>
     <footer>
-
+        <script>
+            calculate_current_solar_angle();
+        </script>
     </footer>
 </html>
