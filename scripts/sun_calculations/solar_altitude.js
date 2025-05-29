@@ -1,8 +1,9 @@
-function calculate_current_solar_angle() {
-    const date = new Date();
-    const latitude = 28.0;
-    const longitude = -81.9;
+import { latitude, longitude } from "../../constants/location.js";
 
-    const position = SunCalc.getPosition(date, latitude, longitude);
-    console.log("Solar Altitude:", position.altitude * (180 / Math.PI));
+export function calculate_solar_angle(time=new Date()) {
+    return SunCalc.getPosition(time, latitude, longitude);
+}
+
+export function calculate_high_noon_angle() {
+    return 14;
 }
