@@ -14,7 +14,7 @@
             <!-- Right Column Content: Input and Car State -->
             <div class="right-column">
                 <h1> Variables </h1>
-                <form>
+                <form onsubmit="">
                     <div class="manual">
                         <h2>Manual Changes</h1>
                         <div class="variable_component">
@@ -46,18 +46,10 @@
                         <h2>Required Inputs</h2>
                         <div class="variable_component">
                             <h3>Battery End SoC </h3>
-                            <input type="text">
+                            <input type="text" required>
                         </div>
-                        <div class="variable_component">
-                            <h3>Rolling Resistance</h3>
-                            <input type="text">
-                        </div>
-                        <div class="variable_component">
-                            <h3>Drag Coefficient</h3>
-                            <input type="text">
-                        </div>    
                     </div>
-                    <button type="submit">Compute</button>
+                    <button type="submit">Compute Average Speed</button>
                 </form>
                 <div>
                     <h2> Car Data </h2>
