@@ -9,7 +9,7 @@
         <div class="container">
             <!-- Left Column Content: Calculation Outputs -->
             <div class="left-column">
-                
+                <canvas></canvas>
             </div>
             <!-- Right Column Content: Input and Car State -->
             <div class="right-column">
@@ -62,7 +62,7 @@
     <footer>
         <script>
         window.addEventListener("load", () => {
-            console.log(array_power());
+            console.log(array_power_t_to_t(new Date("2025-06-04T07:30:00Z"), new Date("2025-06-04T15:30:00Z")) / 1000, "kW*hrs");
         });
         </script>
     </footer>
