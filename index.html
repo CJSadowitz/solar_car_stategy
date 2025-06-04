@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="styles.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/suncalc/1.8.0/suncalc.min.js"></script>
         <script type="module" src="scripts/average_speed/array_prediction.js" defer></script>
-        <script src="scripts/power_map/shader.js"></script>
+        <script type="module" src="scripts/power_map/main.js" defer></script>
     </head>
     <body>
         <div class="container">
@@ -69,10 +69,11 @@
         <script>
             var canvas = document.getElementById("canvas");
             var gl = canvas.getContext("webgl");
+            var buffer = [];
             window.addEventListener("load", () => {
                 console.log(array_power_t_to_t(new Date("2025-06-04T07:30:00Z"), new Date("2025-06-04T15:30:00Z")) / 1000, "kW*hrs");
+                main();
             });
-            get_shader_program();
         </script>
     </footer>
 </html>

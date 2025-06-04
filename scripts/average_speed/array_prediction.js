@@ -1,5 +1,5 @@
 import {calculate_solar_angle, integrate_solar_angle} from "../sun_calculations/solar_altitude.js";
-import {array_power_coefficient, array_efficiency, array_area, array_max_power} from "../../constants/array.js"
+import {array_power_coefficient, array_max_power} from "../../constants/array.js"
 
 function array_power(time) {
     return array_power_coefficient * Math.cos(calculate_solar_angle(time));

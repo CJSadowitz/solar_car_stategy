@@ -1,9 +1,9 @@
-async function get_shader_program() {
-    vertex_source = await fetch("scripts/power_map/vertex.glsl");
-    fragment_source = await fetch("scripts/power_map/fragment.glsl");
-    vertex_shader = create_shader(gl.VERTEX_SHADER, await vertex_source.text());
-    fragment_shader = create_shader(gl.FRAGMENT_SHADER, await fragment_source.text());
-    program = create_program(vertex_shader, fragment_shader);
+export async function get_shader_program() {
+    var vertex_source = await fetch("scripts/power_map/vertex.glsl");
+    var fragment_source = await fetch("scripts/power_map/fragment.glsl");
+    var vertex_shader = create_shader(gl.VERTEX_SHADER, await vertex_source.text());
+    var fragment_shader = create_shader(gl.FRAGMENT_SHADER, await fragment_source.text());
+    var program = create_program(vertex_shader, fragment_shader);
     gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
     gl.clearColor(0, 0, 0, 1);
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
@@ -11,6 +11,7 @@ async function get_shader_program() {
     gl.useProgram(program);
     return program
 }
+
 function create_shader(type, source) {
     var shader = gl.createShader(type);
     gl.shaderSource(shader, source);
@@ -21,7 +22,8 @@ function create_shader(type, source) {
     }
     console.error(gl.getShaderInfoLog(shader));
     gl.deleteShader(shader);
-}		
+}
+
 function create_program(vs, fs) {
     var program = gl.createProgram();
     gl.attachShader(program, vs);

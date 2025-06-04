@@ -10,7 +10,7 @@ body {
 
 .left-column {
     display: grid;
-    grid-template-rows: auto auto auto; /* You can adjust row heights */
+    grid-template-rows: auto auto auto;
     gap: 10px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -34,4 +34,11 @@ body {
     margin-bottom: 1%;
     padding: 2%;
     border-radius: 3%;
+}
+
+.power_map {
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    border: 2px solid black;
 }
